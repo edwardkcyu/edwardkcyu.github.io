@@ -1,5 +1,5 @@
-import { ExternalLink } from "lucide-react";
-import { experience } from "../data/cv-data";
+import { ExternalLink } from 'lucide-react';
+import { experience } from '../data/cv-data';
 
 const Experience = () => {
   return (

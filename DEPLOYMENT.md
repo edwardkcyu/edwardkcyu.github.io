@@ -19,6 +19,7 @@ This guide explains how to deploy your React portfolio to GitHub Pages using Git
 ### 2. Repository Configuration
 
 The deployment pipeline is already configured with:
+
 - **Workflow file**: `.github/workflows/deploy.yml`
 - **Build configuration**: `vite.config.ts` with proper base path
 - **Deployment scripts**: Added to `package.json`
@@ -26,6 +27,7 @@ The deployment pipeline is already configured with:
 ### 3. Automatic Deployment
 
 The site will automatically deploy when you:
+
 - Push to the `main` or `master` branch
 - Create a pull request to `main` or `master`
 
@@ -38,6 +40,7 @@ npm run deploy
 ```
 
 This requires installing `gh-pages` package:
+
 ```bash
 npm install --save-dev gh-pages
 ```
@@ -45,11 +48,13 @@ npm install --save-dev gh-pages
 ## Configuration Details
 
 ### Vite Configuration
+
 - **Base path**: Set to `/edwardkcyu.github.io/` for GitHub Pages
 - **Build output**: `dist` directory
 - **Assets**: Organized in `assets` subdirectory
 
 ### GitHub Actions Workflow
+
 - **Node.js version**: 20 (latest LTS)
 - **Build process**: TypeScript compilation + Vite build
 - **Deployment**: Uses GitHub Pages action
