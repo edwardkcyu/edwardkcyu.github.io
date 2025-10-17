@@ -125,6 +125,7 @@ export const experience: ExperienceItem[] = [
     links: [
       { name: "Futureverse", url: "https://www.futureverse.com/" },
       { name: "The Root Network", url: "https://www.therootnetwork.com/" },
+      { name: "Asset Register", url: "https://ar-docs.futureverse.app/" },
     ],
   },
   {
