@@ -1,8 +1,8 @@
-import Header from "./components/Header";
-import Summary from "./components/Summary";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
+import Header from './components/Header';
+import Summary from './components/Summary';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Education from './components/Education';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <footer className="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
         <div className="container-max section-padding py-8">
           <div className="text-center text-gray-600 dark:text-gray-400">
-            <p>&copy; 2024 Edward Yu. All rights reserved.</p>
+            <p>&copy; 2025 Edward Yu. All rights reserved.</p>
           </div>
         </div>
       </footer>

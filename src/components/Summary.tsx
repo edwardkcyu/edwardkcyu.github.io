@@ -1,4 +1,4 @@
-import { summary } from "../data/cv-data";
+import { summary } from '../data/cv-data';
 
 const Summary = () => {
   return (

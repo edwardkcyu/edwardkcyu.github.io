@@ -1,5 +1,5 @@
-import { GraduationCap } from "lucide-react";
-import { education } from "../data/cv-data";
+import { GraduationCap } from 'lucide-react';
+import { education } from '../data/cv-data';
 
 const Education = () => {
   return (

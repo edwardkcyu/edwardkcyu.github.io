@@ -1,6 +1,6 @@
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-import DarkModeToggle from "./DarkModeToggle";
-import { contactInfo } from "../data/cv-data";
+import { Mail, MapPin, ExternalLink } from 'lucide-react';
+import DarkModeToggle from './DarkModeToggle';
+import { contactInfo } from '../data/cv-data';
 
 const Header = () => {
   return (
@@ -22,13 +22,6 @@ const Header = () => {
               >
                 <Mail className="w-4 h-4 mr-2" />
                 <span>{contactInfo.email}</span>
-              </a>
-              <a
-                href={`tel:${contactInfo.phone}`}
-                className="flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                <span>{contactInfo.phone}</span>
               </a>
               <a
                 href={contactInfo.linkedin}
