@@ -2,7 +2,6 @@ export interface ContactInfo {
   name: string;
   location: string;
   email: string;
-  phone?: string;
   linkedin: string;
 }
 
@@ -31,6 +30,11 @@ export interface EducationItem {
   honors?: string;
 }
 
+export interface Achievement {
+  title: string;
+  description: string;
+}
+
 export const contactInfo: ContactInfo = {
   name: 'Edward Yu',
   location: 'Auckland, New Zealand',
@@ -40,59 +44,79 @@ export const contactInfo: ContactInfo = {
 
 export const summary: SummaryPoint[] = [
   {
-    text: '15+ years of experience in software engineering, specializing in backend systems, distributed architecture, and performance optimization.',
+    text: '15+ years of experience in fullstack engineering, specializing in AWS-native architectures, event-driven systems, and hybrid integration across on-prem and cloud environments.',
   },
   {
-    text: 'Principal Engineer in Web3 infrastructure since 2022 — built scalable NFT/SFT platforms, multi-chain APIs, and blockchain indexers.',
+    text: 'Proven ability to lead teams and deliver scalable, secure integration platforms for large-scale SaaS and Web3 systems.',
   },
   {
-    text: 'Expertise in performance tuning, system reliability, and cross-functional leadership.',
+    text: 'Hands-on expertise with Node.js, AWS (Lambda, API Gateway, Step Functions, EventBridge, SQS/SNS, ECS, DynamoDB), and IaC (CDK, Terraform).',
   },
   {
-    text: 'Strong track record in mentoring engineers, leading architecture design, and delivering high-performance infrastructure for large-scale systems.',
+    text: 'Skilled in modern integration patterns, CI/CD, and system migration to AWS.',
+  },
+  {
+    text: 'Experienced in collaborating with executives to define architecture strategies and align tech with business goals.',
+  },
+];
+
+export const achievements: Achievement[] = [
+  {
+    title: 'Optimized Indexer Performance (Futureverse)',
+    description:
+      'Improved blockchain indexer throughput by 2x and reduced cost by 10x through parallelization and query restructuring on AWS.',
+  },
+  {
+    title: 'Enhanced GraphQL Efficiency (Futureverse)',
+    description:
+      'Cut GraphQL response time by up to 10s, improving data reliability.',
+  },
+  {
+    title: 'Infrastructure Migration (New Order)',
+    description:
+      'Migrated core systems from Heroku to AWS ECS, reducing latency by 50% and cutting costs by 30%.',
+  },
+  {
+    title: 'Streamlined CI/CD Pipelines (Pushpay)',
+    description:
+      'Reduced deployment time by 30 minutes through Jenkins & AWS pipeline tuning.',
   },
 ];
 
 export const skills: SkillCategory[] = [
   {
     name: 'Backend',
+    skills: ['Node.js', 'TypeScript', 'NestJS', 'GraphQL', 'Golang'],
+  },
+  {
+    name: 'Databases',
     skills: [
-      'TypeScript',
-      'Golang',
-      'Python',
-      'Node.js',
-      'NestJS',
+      'DynamoDB',
+      'MongoDB',
       'PostgreSQL',
-      'ElasticSearch',
-      'GraphQL',
-      'AWS (SQS, DynamoDB, Kinesis, ECS, EKS, EventBridge)',
+      'ElasticSearch/OpenSearch',
+      'Neptune',
+    ],
+  },
+  {
+    name: 'Cloud & DevOps',
+    skills: [
+      'AWS (ECS, Lambda, EventBridge, DynamoDB, Kinesis, SQS)',
+      'Terraform',
+      'CDK',
+      'Docker',
+      'CI/CD (GitHub Actions, Jenkins)',
     ],
   },
   {
     name: 'Frontend',
     skills: [
-      'TypeScript',
       'React',
       'Next.js',
-      'Vercel',
-      'Webpack',
+      'Tailwind CSS',
       'Chakra UI',
-    ],
-  },
-  {
-    name: 'Code Quality',
-    skills: ['Jest', 'Mocha', 'ESLint', 'Prettier', 'Mocking'],
-  },
-  {
-    name: 'DevOps',
-    skills: [
-      'CI/CD',
-      'AWS CDK',
-      'Terraform',
-      'GitHub Actions',
-      'Jenkins',
-      'Containers',
-      'Docker',
+      'Vite',
+      'Webpack',
     ],
   },
   {
@@ -106,20 +130,35 @@ export const skills: SkillCategory[] = [
       'Indexers',
     ],
   },
+  {
+    name: 'Testing & Quality',
+    skills: ['Jest', 'Mocha', 'ESLint', 'Prettier'],
+  },
+  {
+    name: 'AI Tools',
+    skills: [
+      'Cursor',
+      'GitHub Copilot',
+      'MCP',
+      'OpenAI Atlas',
+      'GitHub Spec Kit',
+    ],
+  },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    title: 'Principal Engineer',
+    title: 'Principal Engineer — Futureverse, NZ | Web3',
     company: 'Futureverse, NZ (Web3)',
-    period: 'May 2025 – Oct 2025',
-    note: 'Company closed due to funding issues',
+    period: 'Aug 2023 – Oct 2025',
+    note: 'Company shut down due to lack of funding',
     description: [
-      'Architected scalable multi-chain APIs for NFT/SFT asset management across multiple L1/L2 chains.',
-      'Optimized blockchain indexers for 10x cost reduction and 2x performance gains.',
-      'Designed cross-chain asset infrastructure for real-time gaming item management.',
-      'Led system-wide performance tuning and database optimization.',
-      'Mentored teams and drove architecture decisions for scalability and reliability.',
+      'Designed AWS-based integration layers powering multi-chain APIs and event-driven pipelines.',
+      'Built real-time integration services using EventBridge and SQS for improved reliability.',
+      'Drove performance tuning for backend indexers, cutting operational cost by 10x and boosting performance by 2x.',
+      'Partnered with CTO and VP Engineering to define integration strategy and architecture standards.',
+      'Mentored developers on scalability, modularity, and fault tolerance.',
+      'Owned platform reliability, monitoring, and deployment automation.',
     ],
     links: [
       { name: 'Futureverse', url: 'https://www.futureverse.com/' },
@@ -128,22 +167,12 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: 'Senior Full Stack Engineer',
-    company: 'Futureverse, NZ (Web3)',
-    period: 'Aug 2023 – May 2025',
-    description: [
-      'Built and maintained GraphQL APIs and TypeScript SDKs for blockchain data and gaming integrations.',
-      'Worked across AWS infrastructure (Lambda, DynamoDB, ECS, EventBridge, SQS, OpenSearch).',
-    ],
-  },
-  {
-    title: 'Senior Software Engineer',
+    title: 'Senior Software Engineer — New Order, US | Web3',
     company: 'New Order, US (Web3)',
     period: 'Apr 2023 – Jul 2023',
-    note: 'Project stopped due to lack of funding',
+    note: 'Project discontinued due to funding shortage',
     description: [
-      'Full-stack development using NestJS, Next.js, and AWS CDK.',
-      'Managed frontend, backend, infrastructure, and research as a core startup engineer.',
+      'Fullstack development collaborating directly with cofounders and executives.',
     ],
     links: [
       { name: 'New Order', url: 'https://www.neworder.network/' },
@@ -151,27 +180,24 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: 'Senior Software Engineer',
+    title: 'Senior Software Engineer — NEAR Inc, US | Web3',
     company: 'NEAR Inc, US (Web3)',
     period: 'Oct 2022 – Jan 2023',
-    note: 'Ended due to company restructure and layoffs',
-    description: [
-      'Contributed to AstroDAO, a DAO management platform on the NEAR protocol.',
-      'Worked on full-stack development using Next.js, NestJS, AWS, and Kubernetes.',
-    ],
-    links: [{ name: 'AstroDAO', url: 'https://app.astrodao.com/' }],
+    note: 'Project halted due to company restructuring',
+    description: ['Fullstack engineering to support system development.'],
+    links: [{ name: 'AstroDAO', url: 'https://x.com/astrodao?lang=en' }],
   },
   {
-    title: 'Senior Software Engineer',
+    title: 'Senior Software Engineer — Pushpay, NZ | SaaS',
     company: 'Pushpay, NZ (SaaS)',
     period: 'Mar 2020 – Sep 2022',
     description: [
-      'Migrated REST APIs to GraphQL and optimized AWS services (ECS, DynamoDB, Kinesis, SQS, Lambda).',
-      'Improved CI/CD pipelines using Jenkins and enhanced backend performance for production workloads.',
+      'Mastered AWS infrastructure, optimized CI/CD pipelines, and migrated REST APIs to GraphQL.',
+      'Tuned AWS Timestream DB and delivered Node.js backend improvements.',
     ],
   },
   {
-    title: 'Backend Engineer',
+    title: 'Backend Engineer - KintoHub, HK',
     company: 'KintoHub, HK',
     period: 'Apr 2019 – Feb 2020',
     description: [
@@ -180,7 +206,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: 'Senior Software Analyst',
+    title: 'Senior Software Analyst - TVB New Media Group, HK',
     company: 'TVB New Media Group, HK',
     period: 'Apr 2018 – Mar 2019',
     description: [
@@ -188,7 +214,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: 'Analyst Programmer',
+    title: 'Analyst Programmer - Hospital Authority, HK',
     company: 'Hospital Authority, HK',
     period: 'Aug 2010 – Apr 2018',
     description: [
@@ -196,7 +222,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: 'Software Engineer',
+    title: 'Software Engineer - Mobigator Technology Group, HK',
     company: 'Mobigator Technology Group, HK',
     period: 'Jul 2009 – Aug 2010',
     description: [
@@ -206,8 +232,7 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const education: EducationItem = {
-  degree: 'Bachelor of Engineering in Computer Science',
+  degree: 'BEng (Computer Science) — 1st Class Honours',
   institution: 'The Hong Kong University of Science and Technology',
   period: '2006 – 2009',
-  honors: 'Graduated with First Class Honors',
 };

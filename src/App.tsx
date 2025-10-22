@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Summary from './components/Summary';
 import Skills from './components/Skills';
+import Achievements from './components/Achievements';
 import Experience from './components/Experience';
 import Education from './components/Education';
 
@@ -11,6 +12,7 @@ function App() {
       <main>
         <Summary />
         <Skills />
+        <Achievements />
         <Experience />
         <Education />
       </main>
